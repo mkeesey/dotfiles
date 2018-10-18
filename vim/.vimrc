@@ -44,6 +44,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 "" NeoBundle install packages
 "*****************************************************************************
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
