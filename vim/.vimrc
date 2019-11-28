@@ -44,7 +44,8 @@ NeoBundle 'editorconfig/editorconfig-vim'
 "" NeoBundle install packages
 "*****************************************************************************
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-commentary'
+NeoBundle 'scrooloose/nerdcommenter'
+"NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'vim-airline/vim-airline'
@@ -86,6 +87,7 @@ NeoBundle "fatih/vim-go"
 "" Javascript Bundle
 NeoBundle "scrooloose/syntastic"
 
+NeoBundle "avakhov/vim-yaml"
 
 "" HTML Bundle
 NeoBundle 'vim-scripts/HTML-AutoCloseTag'
