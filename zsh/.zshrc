@@ -24,5 +24,15 @@ fi
 
 EDITOR="vim"
 VISUAL="vim"
+GIT_EDITOR="vim"
 
 export PATH=${PATH}:/home/mkeesey/go/bin
+export PATH=${PATH}:/home/mkeesey/.gem/ruby/2.6.0/bin
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_us.UTF-8
+
+if [[ "$(uname)" == "Linux" ]]; then
+	alias pbcopy='xsel --clipboard --input'
+	alias pbpaste='xsel --clipboard --output'
+fi
