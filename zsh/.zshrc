@@ -3,9 +3,11 @@ autoload -Uz compinit
 compinit
 
 # Prompts
-autoload -Uz promptinit
-promptinit
-prompt redhat
+zstyle ':vcs_info:*' actionformats "%r/%S %b %m%u%c "
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+PS1='%3~ ${vcs_info_msg_0_}%# '
 
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
