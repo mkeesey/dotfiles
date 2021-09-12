@@ -3,9 +3,6 @@ autoload -Uz compinit
 compinit
 
 # Prompts
-#autoload -Uz promptinit
-#promptinit
-#prompt redhat
 zstyle ':vcs_info:*' actionformats "%r/%S %b %m%u%c "
 autoload -Uz vcs_info
 precmd() { vcs_info }
