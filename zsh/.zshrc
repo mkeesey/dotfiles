@@ -3,9 +3,14 @@ autoload -Uz compinit
 compinit
 
 # Prompts
-autoload -Uz promptinit
-promptinit
-prompt redhat
+#autoload -Uz promptinit
+#promptinit
+#prompt redhat
+zstyle ':vcs_info:*' actionformats "%r/%S %b %m%u%c "
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+PS1='%3~ ${vcs_info_msg_0_}%# '
 
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
@@ -26,8 +31,9 @@ EDITOR="vim"
 VISUAL="vim"
 GIT_EDITOR="vim"
 
+export PATH=${PATH}:/home/mkeesey/bin
 export PATH=${PATH}:/home/mkeesey/go/bin
-export PATH=${PATH}:/home/mkeesey/.gem/ruby/2.6.0/bin
+export PATH=${PATH}:/home/mkeesey/.gem/ruby/2.7.0/bin
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_us.UTF-8
@@ -36,3 +42,9 @@ if [[ "$(uname)" == "Linux" ]]; then
 	alias pbcopy='xsel --clipboard --input'
 	alias pbpaste='xsel --clipboard --output'
 fi
+
+alias act='source venv/bin/activate'
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
