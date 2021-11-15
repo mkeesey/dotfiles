@@ -32,6 +32,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'scrooloose/nerdcommenter'
+
 call plug#end()
 
 "" Split
@@ -78,6 +80,10 @@ else
 endif
 
 set grepprg=ack\ -H\ --nocolor\ --nogroup
+
+"" Vmap for maintain Visual Mode after shifting > and <
+vmap < <gv
+vmap > >gv
 
 " Start using lua
 " Setup lspinstall
