@@ -3,7 +3,7 @@
 "source ~/.vimrc
 
 tnoremap <Esc> <C-\><C-n> " escape works in terminal
-set shell=/usr/bin/zsh
+set shell=zsh
 
 " Install vim-plug if not found
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
