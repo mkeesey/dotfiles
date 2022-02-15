@@ -34,6 +34,9 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'ray-x/go.nvim'
+
 call plug#end()
 
 "" Split
@@ -51,6 +54,7 @@ cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>e'
 let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_by_filename = 1
 
 " vim-airline
 let g:airline_theme = 'powerlineish'
@@ -84,6 +88,14 @@ set grepprg=ack\ -H\ --nocolor\ --nogroup
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
+
+"" Use spaces for formatting, etc.
+set tabstop     =2
+set softtabstop =2
+set shiftwidth  =2
+set expandtab
+
+set number
 
 " Start using lua
 " Setup lspinstall
