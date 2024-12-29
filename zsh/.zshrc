@@ -43,5 +43,7 @@ fi
 alias act='source venv/bin/activate'
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
-eval "$(pyenv virtualenv-init -)"
+
+SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
