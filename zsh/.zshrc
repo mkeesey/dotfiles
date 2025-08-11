@@ -47,3 +47,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# bun completions
+[ -s "/home/mkeesey/.bun/_bun" ] && source "/home/mkeesey/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
